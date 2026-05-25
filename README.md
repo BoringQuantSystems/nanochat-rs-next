@@ -1,6 +1,10 @@
+<p align="center">
+  <img src="assets/nanochat-rs-next-banner.png" alt="nanochat-rs-next banner" width="900">
+</p>
+
 # nanochat-rs-next
 
-[![CI](https://github.com/ricardofrantz/nanochat-rs-next/actions/workflows/ci.yml/badge.svg)](https://github.com/ricardofrantz/nanochat-rs-next/actions/workflows/ci.yml)
+[![CI](https://github.com/BoringQuantSystems/nanochat-rs-next/actions/workflows/ci.yml/badge.svg)](https://github.com/BoringQuantSystems/nanochat-rs-next/actions/workflows/ci.yml)
 
 `nanochat-rs-next` is a Rust CLI for training and evaluating tiny language models from a text corpus through a configurable, reproducible workflow. Users pass corpus paths and tune the full training/sampling surface from the command line: execution mode (`train`, `sample`, `ablate`), engine (`scalar` pure-Rust or `tensor`), model kind (`bigram` or `mini-gpt`), optimizer (`sgd` / `adamw`), learning-rate schedule, seed, step budget, batch/sequence settings, checkpoint cadence, sampler settings, and output locations. A run produces persisted artifacts (checkpoints and outputs), generated text for qualitative inspection, structured metrics and logs for drift/quality tracking, and ablation summaries for controlled comparisons; this enables direct experimentation over speed, quality, and behavior under equivalent settings. The intent is to keep runs deterministic and comparable by design, with CLI-defined controls for each experiment and machine-readable artifacts aligned to benchmark and ablation workflows. Hardware support is explicitly surfaced by mode: CPU runs work through the built-in tensor path, while GPU use depends on the optional `tch` backend and local PyTorch/CUDA availability. Reproducibility is enforced with explicit CLI parameters and stable artifact naming/output layout, which makes it straightforward to rerun the same experiment, compare checkpoints across commits, and audit benchmark deltas over time.
 
