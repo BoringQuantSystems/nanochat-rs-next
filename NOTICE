@@ -1,0 +1,17 @@
+nanochat-rs-next
+
+Copyright 2026 Ricardo A S Frantz
+
+This project was originally created by Ricardo A S Frantz.
+It is maintained by Ricardo A S Frantz.
+Project home: https://github.com/BoringQuantSystems/nanochat-rs-next
+Contact: rasfrantz@gmail.com
+
+Modifications and derivative works must preserve the applicable copyright,
+license, and notice text as required by Apache-2.0.
+
+Third-party material
+
+references/karpathy_microgpt.py is by Andrej Karpathy (@karpathy). It is kept
+for reference only, is not part of this project's code, and is not covered by
+this project's Apache-2.0 license.
