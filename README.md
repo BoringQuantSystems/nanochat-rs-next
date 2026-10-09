@@ -138,3 +138,10 @@ Artifacts are written to `results/`.
 
 - https://github.com/AntigmaLabs/nanochat-rs
 - https://github.com/karpathy/nanochat
+
+## License
+
+This project is licensed under Apache-2.0.
+
+Originally developed by Ricardo A S Frantz. See `LICENSE` and `NOTICE` for license
+terms and attribution notices.

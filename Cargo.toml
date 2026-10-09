@@ -3,6 +3,7 @@ name = "nanochat-rs-next"
 version = "0.1.0"
 edition = "2024"
 description = "Rust-first nanochat continuation for benchmark-driven training, eval, and inference experiments."
+license = "Apache-2.0"
 
 [features]
 default = []
