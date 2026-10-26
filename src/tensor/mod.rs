@@ -1415,7 +1415,7 @@ mod tests {
     }
 
     fn train_config_from_cli(mut args: Vec<String>) -> TrainConfig {
-        let mut iter = vec!["nanochat-rs-next".to_string(), "train".to_string()];
+        let mut iter = vec!["nanochat-rs".to_string(), "train".to_string()];
         iter.append(&mut args);
         let command = cli::try_command_from_iter(iter).expect("valid train command");
         let AppCommand::Train(config) = command else {
@@ -1425,7 +1425,7 @@ mod tests {
     }
 
     fn sample_config_from_cli(mut args: Vec<String>) -> SampleConfig {
-        let mut iter = vec!["nanochat-rs-next".to_string(), "sample".to_string()];
+        let mut iter = vec!["nanochat-rs".to_string(), "sample".to_string()];
         iter.append(&mut args);
         let command = cli::try_command_from_iter(iter).expect("valid sample command");
         let AppCommand::Sample(config) = command else {

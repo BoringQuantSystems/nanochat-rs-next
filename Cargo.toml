@@ -1,5 +1,5 @@
 [package]
-name = "nanochat-rs-next"
+name = "nanochat-rs"
 version = "0.1.0"
 edition = "2024"
 description = "Rust-first nanochat continuation for benchmark-driven training, eval, and inference experiments."

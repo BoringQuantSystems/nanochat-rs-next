@@ -1,4 +1,4 @@
-# nanochat-rs-next Roadmap
+# nanochat-rs Roadmap
 
 Status as of 2026-02-13: foundation complete (scalar autograd, tensor dual-backend, CLI, ablation, checkpointing, 62 tests passing, all quality gates green).
 

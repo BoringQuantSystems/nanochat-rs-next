@@ -1,6 +1,6 @@
 # Language Model Experiment
 
-`nanochat-rs-next` is a separate Rust experiment for training and evaluating tiny language models against nanochat baselines. It shares the organization namespace but is not part of the `nanotrade` critical path.
+`nanochat-rs` is a separate Rust experiment for training and evaluating tiny language models against nanochat baselines. It shares the organization namespace but is not part of the `nanotrade` critical path.
 
 ## Language
 
@@ -75,7 +75,7 @@ _Avoid_: file
 
 ## Example Dialogue
 
-Dev: Should `nanochat-rs-next` appear as a dependency in `nanotrade`?
+Dev: Should `nanochat-rs` appear as a dependency in `nanotrade`?
 
 Domain expert: No. It is a separate experiment, not a trading-stack support module.
 
@@ -90,7 +90,7 @@ Domain expert: No. Tensor is an engine mode; mini-gpt is a model kind.
 ## Flagged Ambiguities
 
 **nano prefix**:
-The `nanochat-rs-next` name shares the `nano` prefix, but it is not part of the nano trading stack.
+The `nanochat-rs` name shares the `nano` prefix, but it is not part of the nano trading stack.
 
 **mode vs model kind**:
 Use "engine mode" for scalar/tensor and "model kind" for bigram/mini-gpt.

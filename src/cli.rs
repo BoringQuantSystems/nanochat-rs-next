@@ -10,11 +10,7 @@ use crate::config::{
 use crate::training;
 
 #[derive(Debug, Parser)]
-#[command(
-    name = "nanochat-rs-next",
-    version,
-    about = "Rust nanochat benchmark CLI"
-)]
+#[command(name = "nanochat-rs", version, about = "Rust nanochat benchmark CLI")]
 struct Cli {
     #[command(subcommand)]
     command: CliCommand,
@@ -217,7 +213,7 @@ mod tests {
 
     #[test]
     fn parses_train_defaults() {
-        let command = try_command_from_iter(["nanochat-rs-next", "train"]).expect("valid command");
+        let command = try_command_from_iter(["nanochat-rs", "train"]).expect("valid command");
         let AppCommand::Train(config) = command else {
             panic!("expected train command");
         };
@@ -241,7 +237,7 @@ mod tests {
     #[test]
     fn parses_train_variant_overrides() {
         let command = try_command_from_iter([
-            "nanochat-rs-next",
+            "nanochat-rs",
             "train",
             "--tie-lm-head=false",
             "--input-rmsnorm=true",
@@ -261,7 +257,7 @@ mod tests {
 
     #[test]
     fn parses_train_sqrt_lr_schedule() {
-        let command = try_command_from_iter(["nanochat-rs-next", "train", "--lr-schedule", "sqrt"])
+        let command = try_command_from_iter(["nanochat-rs", "train", "--lr-schedule", "sqrt"])
             .expect("valid train command");
         let AppCommand::Train(config) = command else {
             panic!("expected train command");
@@ -273,7 +269,7 @@ mod tests {
     #[test]
     fn parses_sample_overrides() {
         let command = try_command_from_iter([
-            "nanochat-rs-next",
+            "nanochat-rs",
             "sample",
             "--mode",
             "scalar",
@@ -305,7 +301,7 @@ mod tests {
     #[test]
     fn parses_sample_defaults() {
         let command =
-            try_command_from_iter(["nanochat-rs-next", "sample"]).expect("valid sample command");
+            try_command_from_iter(["nanochat-rs", "sample"]).expect("valid sample command");
         let AppCommand::Sample(config) = command else {
             panic!("expected sample command");
         };
@@ -322,14 +318,14 @@ mod tests {
 
     #[test]
     fn supports_help_flag() {
-        let err = try_command_from_iter(["nanochat-rs-next", "--help"]).expect_err("help exits");
+        let err = try_command_from_iter(["nanochat-rs", "--help"]).expect_err("help exits");
         assert_eq!(err.kind(), ErrorKind::DisplayHelp);
     }
 
     #[test]
     fn parses_ablate_defaults() {
         let command =
-            try_command_from_iter(["nanochat-rs-next", "ablate"]).expect("valid ablate command");
+            try_command_from_iter(["nanochat-rs", "ablate"]).expect("valid ablate command");
         let AppCommand::Ablate(config) = command else {
             panic!("expected ablate command");
         };
@@ -342,9 +338,8 @@ mod tests {
 
     #[test]
     fn parses_mini_gpt_model_kind() {
-        let command =
-            try_command_from_iter(["nanochat-rs-next", "train", "--model-kind", "mini-gpt"])
-                .expect("valid train command");
+        let command = try_command_from_iter(["nanochat-rs", "train", "--model-kind", "mini-gpt"])
+            .expect("valid train command");
         let AppCommand::Train(config) = command else {
             panic!("expected train command");
         };
@@ -354,7 +349,7 @@ mod tests {
     #[test]
     fn parses_tensor_mode_and_optimizer() {
         let command = try_command_from_iter([
-            "nanochat-rs-next",
+            "nanochat-rs",
             "train",
             "--mode",
             "tensor",
@@ -373,7 +368,7 @@ mod tests {
     #[test]
     fn parses_tensor_mode_with_mini_gpt_model_kind() {
         let command = try_command_from_iter([
-            "nanochat-rs-next",
+            "nanochat-rs",
             "train",
             "--mode",
             "tensor",
