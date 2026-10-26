@@ -1,6 +1,6 @@
 use std::process;
 
-use nanochat_rs_next::{cli, config::AppCommand, config::Mode, experiments, scalar, tensor};
+use nanochat_rs::{cli, config::AppCommand, config::Mode, experiments, scalar, tensor};
 
 fn run_or_exit(
     mode: Mode,

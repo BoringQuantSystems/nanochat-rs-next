@@ -28,7 +28,7 @@ Primary sources:
   - `total_nats / (log(2) * total_bytes)`
   - Source: `references/nanochat/nanochat/loss_eval.py:9-65`
 
-Implication for parity in `nanochat-rs-next`:
+Implication for parity in `nanochat-rs`:
 - Rust tensor path must report a metric equivalent to BPB (or explicitly map CE to BPB) to claim apples-to-apples parity.
 
 ## 2) Optimizer and schedules
@@ -103,7 +103,7 @@ Implication for parity in `nanochat-rs-next`:
   - validation metric at eval points (`val/bpb`)
   - Source: `references/nanochat/scripts/base_train.py:411-416`, `references/nanochat/scripts/base_train.py:535-547`
 
-## 6) Parity checklist for `nanochat-rs-next` (Phase 1.2)
+## 6) Parity checklist for `nanochat-rs` (Phase 1.2)
 
 1. Match objective semantics: CE with ignore-index behavior equivalent to upstream.
 2. Match validation metric semantics: BPB (byte-weighted nats to bits conversion).

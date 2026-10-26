@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="assets/nanochat-rs-next-banner.png" alt="nanochat-rs-next banner" width="900">
+  <img src="assets/nanochat-rs-banner.png" alt="nanochat-rs banner" width="900">
 </p>
 
-# nanochat-rs-next
+# nanochat-rs
 
-[![CI](https://github.com/BoringQuantSystems/nanochat-rs-next/actions/workflows/ci.yml/badge.svg)](https://github.com/BoringQuantSystems/nanochat-rs-next/actions/workflows/ci.yml)
+[![CI](https://github.com/machine-made/nanochat-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/machine-made/nanochat-rs/actions/workflows/ci.yml)
 
-`nanochat-rs-next` is a Rust CLI for training and evaluating tiny language models from a text corpus through a configurable, reproducible workflow. Users pass corpus paths and tune the full training/sampling surface from the command line: execution mode (`train`, `sample`, `ablate`), engine (`scalar` pure-Rust or `tensor`), model kind (`bigram` or `mini-gpt`), optimizer (`sgd` / `adamw`), learning-rate schedule, seed, step budget, batch/sequence settings, checkpoint cadence, sampler settings, and output locations. A run produces persisted artifacts (checkpoints and outputs), generated text for qualitative inspection, structured metrics and logs for drift/quality tracking, and ablation summaries for controlled comparisons; this enables direct experimentation over speed, quality, and behavior under equivalent settings. The intent is to keep runs deterministic and comparable by design, with CLI-defined controls for each experiment and machine-readable artifacts aligned to benchmark and ablation workflows. Hardware support is explicitly surfaced by mode: CPU runs work through the built-in tensor path, while GPU use depends on the optional `tch` backend and local PyTorch/CUDA availability. Reproducibility is enforced with explicit CLI parameters and stable artifact naming/output layout, which makes it straightforward to rerun the same experiment, compare checkpoints across commits, and audit benchmark deltas over time.
+`nanochat-rs` is a Rust CLI for training and evaluating tiny language models from a text corpus through a configurable, reproducible workflow. Users pass corpus paths and tune the full training/sampling surface from the command line: execution mode (`train`, `sample`, `ablate`), engine (`scalar` pure-Rust or `tensor`), model kind (`bigram` or `mini-gpt`), optimizer (`sgd` / `adamw`), learning-rate schedule, seed, step budget, batch/sequence settings, checkpoint cadence, sampler settings, and output locations. A run produces persisted artifacts (checkpoints and outputs), generated text for qualitative inspection, structured metrics and logs for drift/quality tracking, and ablation summaries for controlled comparisons; this enables direct experimentation over speed, quality, and behavior under equivalent settings. The intent is to keep runs deterministic and comparable by design, with CLI-defined controls for each experiment and machine-readable artifacts aligned to benchmark and ablation workflows. Hardware support is explicitly surfaced by mode: CPU runs work through the built-in tensor path, while GPU use depends on the optional `tch` backend and local PyTorch/CUDA availability. Reproducibility is enforced with explicit CLI parameters and stable artifact naming/output layout, which makes it straightforward to rerun the same experiment, compare checkpoints across commits, and audit benchmark deltas over time.
 
-`nanochat-rs-next` is a Rust-first continuation of [`AntigmaLabs/nanochat-rs`](https://github.com/AntigmaLabs/nanochat-rs), benchmarked against [`karpathy/nanochat`](https://github.com/karpathy/nanochat).
+`nanochat-rs` is a Rust-first continuation of [`AntigmaLabs/nanochat-rs`](https://github.com/AntigmaLabs/nanochat-rs), benchmarked against [`karpathy/nanochat`](https://github.com/karpathy/nanochat).
 
 ## Repository Layout
 
@@ -143,7 +143,7 @@ Artifacts are written to `results/`.
 
 This project is licensed under Apache-2.0.
 
-Originally developed by Ricardo A S Frantz. See `LICENSE` and `NOTICE` for license
+Originally developed by Ricardo Frantz. See `LICENSE` and `NOTICE` for license
 terms and attribution notices.
 
 ## Disclaimer

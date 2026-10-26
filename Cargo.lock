@@ -407,7 +407,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "nanochat-rs-next"
+name = "nanochat-rs"
 version = "0.1.0"
 dependencies = [
  "clap",
