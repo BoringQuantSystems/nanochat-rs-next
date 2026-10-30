@@ -11,5 +11,5 @@ tch-backend = ["dep:tch"]
 
 [dependencies]
 clap = { version = "4.5.30", features = ["derive"] }
-rand = "0.8.5"
-tch = { version = "0.20.0", optional = true }
+rand = "0.10.3"
+tch = { version = "0.26.0", optional = true }
